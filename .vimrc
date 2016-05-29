@@ -13,6 +13,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'digitaltoad/vim-pug'
 call vundle#end()
 filetype plugin indent on
 set t_Co=256
@@ -34,6 +35,7 @@ set foldnestmax=10
 set foldlevelstart=10
 set clipboard=unnamedplus
 set shortmess+=I
+set relativenumber
 
 "hide menu bar stuffs
 function! ToggleGUICruft()
