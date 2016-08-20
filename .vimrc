@@ -14,6 +14,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'scrooloose/nerdtree'
+
 call vundle#end()
 filetype plugin indent on
 set t_Co=256
@@ -64,13 +69,17 @@ let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+map <C-n> :NERDTreeToggle<CR>
+" JSX
+let g:jsx_ext_required = 0
+
 " tab navigation like firefox
-"nnoremap <C-S-tab> :tabprevious<CR>
-"nnoremap <C-tab>   :tabnext<CR>
-"nnoremap <C-t>     :tabnew<CR>
-"inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-"inoremap <C-tab>   <Esc>:tabnext<CR>i
-"inoremap <C-t>     <Esc>:tabnew<CR>
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
 
 "Save vim stuff in user directory because dropbox is a pain.
 set dir=~/.vimswap//,/var/tmp//,/tmp//,.
