@@ -71,7 +71,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 map <C-n> :NERDTreeToggle<CR>
 " JSX
-let g:jsx_ext_required = 0
+" let g:jsx_ext_required = 0
 
 " tab navigation like firefox
 nnoremap <C-S-tab> :tabprevious<CR>
